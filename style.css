@@ -2,9 +2,36 @@
   margin: 0;
   padding: 0;
   font-family: 'Special Elite', cursive;
+  font-size: 24px;
+  text-align: center;
 }
 
 .container {
   display: inline-block;
- 
+  margin-top: 48px;
+  padding: 24px;
+}
+
+.typed {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  border-right: 2px solid black;
+  animation: typing, blinking;
+  animation-duration: 1.5s, 1s;
+  animation-timing-function: steps(31, end);
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1, infinite;
+
+}
+
+@keyframes typing {
+  from {width: 0}
+  to {width: 100%}
+}
+
+@keyframes blinking {
+  0% {border-right-color: transparent}
+  50% {border-right-color: black}
+  100% {border-right-color: transparent}
 }
