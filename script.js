@@ -4,23 +4,23 @@ let index = 0;
 const text = [
   'Hello, Friend...', 
   'Welcome to my home.',
-  'You are just in time for the party!'
+  'You are just in time for the party!',
+  'What\'s your name anyway?'
 ]
 
 document.addEventListener('keyup', (e) => {
   if (e.code === 'Space') {
-    setInterval(() => {
       printNewText();
-    }, 3000)
-    
   }
 })
 
 function printNewText() {
       if (index < text.length) {
         container.innerHTML = `<p class='typed'>${text[index]}</p>`   
-      index++
+      index++;
       }
-      
-  
-}
+      if (index === text.length) {
+        setTimeout(() => {
+          userInput.style.display = 'inline-block';
+        }, 2000)
+}}
